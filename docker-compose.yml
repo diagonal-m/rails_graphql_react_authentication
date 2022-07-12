@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  api:
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    ports:
+      - "3333:3333"
+    volumes:
+      - ./backend:/var/www/backend
+      - gem_data:/usr/local/bundle
+    command: /bin/sh -c "rm -f /var/www/backend/tmp/pids/server.pid && bundle exec rails s -p 3333 -b '0.0.0.0'"
+volumes:
+  gem_data:
