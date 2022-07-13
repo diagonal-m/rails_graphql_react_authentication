@@ -18,5 +18,16 @@ module Types
     def current_user
       context[:current_user]
     end
+
+    field :tasks, [Types::TaskType], null: true
+    def tasks
+      Task.all
+    end
+
+    field :my_tasks, [Types::TaskType], null: true
+    def my_tasks
+      current_user = context[:current_user]
+      current_user&.tasks
+    end
   end
 end
