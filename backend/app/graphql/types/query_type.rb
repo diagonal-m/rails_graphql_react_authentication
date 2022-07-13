@@ -13,5 +13,10 @@ module Types
     def test_field
       "Hello World!"
     end
+
+    field :current_user, Types::UserType, null: true
+    def current_user
+      context[:current_user]
+    end
   end
 end
