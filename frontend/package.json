@@ -29,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "eslintConfig": {
     "extends": [
@@ -50,9 +51,13 @@
     ]
   },
   "devDependencies": {
-    "@graphql-codegen/cli": "^2.8.1",
+    "@graphql-codegen/cli": "2.8.1",
     "@types/axios": "^0.14.0",
     "@types/js-cookie": "^2.2.6",
-    "@types/react-router-dom": "^5.1.7"
+    "@types/react-router-dom": "^5.1.7",
+    "@graphql-codegen/typescript-react-apollo": "3.3.1",
+    "@graphql-codegen/typescript-operations": "2.5.1",
+    "@graphql-codegen/typescript": "2.7.1",
+    "@graphql-codegen/introspection": "2.2.0"
   }
 }
