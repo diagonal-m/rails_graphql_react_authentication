@@ -1,0 +1,52 @@
+"""
+An ISO 8601-encoded datetime
+"""
+scalar ISO8601DateTime
+
+type Mutation {
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
+
+type Query {
+  currentUser: User
+  myTasks: [Task!]!
+  tasks: [Task!]!
+
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
+
+type Task {
+  createdAt: ISO8601DateTime!
+  id: ID!
+  name: String
+  updatedAt: ISO8601DateTime!
+  userId: Int!
+}
+
+type User {
+  allowPasswordChange: Boolean
+  confirmationSentAt: ISO8601DateTime
+  confirmationToken: String
+  confirmedAt: ISO8601DateTime
+  createdAt: ISO8601DateTime!
+  email: String
+  encryptedPassword: String!
+  id: ID!
+  image: String
+  name: String
+  nickname: String
+  provider: String!
+  rememberCreatedAt: ISO8601DateTime
+  resetPasswordSentAt: ISO8601DateTime
+  resetPasswordToken: String
+  tokens: String
+  uid: String!
+  unconfirmedEmail: String
+  updatedAt: ISO8601DateTime!
+}
